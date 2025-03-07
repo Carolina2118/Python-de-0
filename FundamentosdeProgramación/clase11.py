@@ -15,6 +15,7 @@ print(id(a))
 print(id(b))
 print(id(c))
 a.append(6)
+# se agrega el 6 al final 
 print(a)
 print(b)
 print(c)
