@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Python en HTML</title>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
+    <h1 >Ejecutando Python en el navegador</h1>
+    <py-script>
+        print("¡Hola desde Python en el navegador!")
+    </py-script>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilo para el título */
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* Estilo para el párrafo */
+        p {
+            font-size: 1.2rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        /* Botón estilizado */
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #ff7eb3;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ff4f81;
+        }
+    </style>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Python en HTML</title>
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilo para el título */
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* Tablero de ajedrez */
+        .board {
+            display: grid;
+            grid-template-columns: repeat(8, 60px);
+            grid-template-rows: repeat(8, 60px);
+            gap: 0;
+            margin-top: 20px;
+            border: 2px solid white;
+        }
+
+        .cell {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        .white {
+            background-color: #f0d9b5;
+        }
+
+        .black {
+            background-color: #372617;
+        }
+
+        /* Botón estilizado */
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #ff7eb3;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ff4f81;
+        }
+       
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Estilo para el tablero */
+        .tablero {
+            display: grid;
+            grid-template-columns: repeat(8, 90px);
+            grid-template-rows: repeat(8, 90px);
+            gap: 1px;
+            border:5px solid #333;
+            background-color: #100f0f;
+        }
+
+        /* Estilo para las casillas del tablero */
+        .casilla {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #161515;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Efecto cuando se pasa el ratón por encima de una casilla */
+        .casilla:hover {
+            background-color: #0c0c0c;
+        }
+
+        /* Estilo para casillas ocupadas (X o O) */
+        .casilla.x {
+            background-color: #bca883;
+            color: rgb(16, 14, 14);
+        }
+
+        .casilla.o {
+            background-color: #cd8b21;
+            color: rgb(12, 11, 11);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="tablero">
+<!--blancas -->
+        <div class="casilla x"><div class="RB">♖</div></div>
+        <div class="casilla o"><div class="NB">♘</div></div>
+        <div class="casilla x"><div class="BB">♗</div></div>
+        <div class="casilla o"><div class="QB">♕</div></div>
+        <div class="casilla x"><div class="RB">♔</div></div>
+        <div class="casilla x"><div class="BB">♗</div></div>
+        <div class="casilla o"><div class="NB">♘</div></div>
+        <div class="casilla o"><div class="RB">♖</div></div>
+<!--PEONES-->
+        <div class="casilla x">♙</div>
+        <div class="casilla o">♙</div>
+        <div class="casilla x">♙</div>
+        <div class="casilla o">♙</div>
+        <div class="casilla x">♙</div>
+        <div class="casilla o">♙</div>
+        <div class="casilla x">♙</div>
+        <div class="casilla x">♙</div>
+<!--FILA -->
+        <div class="casilla x"></div>
+        <div class="casilla o"></div>
+        <div class="casilla x"></div>
+        <div class="casilla o"></div>
+        <div class="casilla x"></div>
+        <div class="casilla o"></div>
+        <div class="casilla o"></div>
+        <div class="casilla o"></div>
+<!--FILA -->
+        <div class="casilla x"></div>
+        <div class="casilla o"></div>
+        <div class="casilla x"></div>
+        <div class="casilla o"></div>
+        <div class="casilla x"></div>
+        <div class="casilla o"></div>
+        <div class="casilla o"></div>
+        <div class="casilla o"></div>
+<!--FILA -->
+        <div class="casilla x"></div>
+        <div class="casilla o"></div>
+        <div class="casilla x"></div>
+        <div class="casilla o"></div>
+        <div class="casilla x"></div>
+        <div class="casilla o"></div>
+        <div class="casilla o"></div>
+        <div class="casilla o"></div>
+
+        <div class="casilla o"></div>
+        <div class="casilla x"></div>
+        <div class="casilla o"></div>
+        <div class="casilla o"></div>
+        <div class="casilla x"></div> 
+        <div class="casilla o"></div>
+        <div class="casilla x"></div> 
+        <div class="casilla x"></div> 
+
+<!--blancas -->
+        <div class="casilla x"><div class="PN1">♟</div></div>
+        <div class="casilla x"><div class="PN2">♟</div></div>
+        <div class="casilla o"><div class="PN3">♟</div></div>
+        <div class="casilla x"><div class="PN4">♟</div></div>
+        <div class="casilla o"><div class="PN5">♟</div></div>
+        <div class="casilla x"><div class="PN6">♟</div></div> 
+        <div class="casilla o"><div class="<!--PEONES-->PN7">♟</div></div>
+        <div class="casilla o"><div class="PN8">♟</div></div>
+<!--PEONES-->
+        <div class="casilla o"><div class="RN">♜</div></div>
+        <div class="casilla x"><div class="NN">♞</div></div>
+        <div class="casilla o"><div class="BN">♝</div></div>
+        <div class="casilla x"><div class="QN">♛</div></div>
+        <div class="casilla o"><div class="RN">♚</div></div>
+        <div class="casilla x"><div class="BN">♝</div></div>
+        <div class="casilla o"><div class="NN">♞</div></div>
+        <div class="casilla x"><div class="RN">♜</div></div> 
+    </div>
+</html>
